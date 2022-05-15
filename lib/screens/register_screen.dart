@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
-class LoginScreen extends StatelessWidget {
-  static String routerName = 'Login';
+class RegisterScreen extends StatelessWidget {
+  static String routerName = 'Register';
 
-  const LoginScreen({Key? key}) : super(key: key);
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'Iniciar Sesión',
+                    'Crear Cuenta',
                     style: Theme.of(context).textTheme.headline4,
                   ),
                   const SizedBox(
@@ -49,16 +49,19 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              TextButton(
-                onPressed: () => Navigator.pushReplacementNamed(context,RegisterScreen.routerName),
+               TextButton(
+                onPressed: () => Navigator.pushReplacementNamed(context,LoginScreen.routerName),
                 style: ButtonStyle(
                   overlayColor: MaterialStateProperty.all(Colors.indigo.withOpacity(0.1)),
                   shape: MaterialStateProperty.all (StadiumBorder())
                 ),
                 child: const Text(
-                'Crea una nueva cuenta',
+                '¿Ya tienes una cuenta?',
                 style: TextStyle(fontSize: 18, color: Colors.black87),
               ),
+              ),
+              const SizedBox(
+                height: 50,
               ),
               const SizedBox(
                 height: 50,

@@ -46,6 +46,9 @@ class MyApp extends StatelessWidget {
         DetailBlogScreen.routerName: (_) => DetailBlogScreen(),
         ProfileScreen.routerName: (_) => ProfileScreen(),
         SettingsScreen.routerName: (_) => SettingsScreen(),
+        RegisterScreen.routerName: (_) => RegisterScreen(),
+
+
       },
       //cambiar colores
       theme: Provider.of<ThemeProvider>(context).currentTheme,
