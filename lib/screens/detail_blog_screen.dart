@@ -2,6 +2,9 @@ import 'package:apfsvalencia/widgets/widgest.dart';
 import 'package:flutter/material.dart';
 
 class DetailBlogScreen extends StatelessWidget {
+  static String routerName = 'DetailBlog';
+
+
   const DetailBlogScreen({Key? key}) : super(key: key);
 
   @override

@@ -1,3 +1,4 @@
+import 'package:apfsvalencia/screens/detail_blog_screen.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -18,7 +19,7 @@ class CardBlog extends StatelessWidget {
         itemHeight: size.height * 0.4,
         itemBuilder: (_, int index) {
           return GestureDetector(
-            onTap: () => Navigator.pushNamed(context, 'detailblog' , arguments: 'detail-article'),
+             onTap: () => Navigator.pushNamed(context, DetailBlogScreen.routerName),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: FadeInImage(

@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
 class LoginScreen extends StatelessWidget {
+  static String routerName = 'Login';
+
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -16,8 +18,7 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: Color.fromRGBO(34, 80, 53, 1),
         title: const Text('APFS VALENCIA'),
       ),
-            drawer: const SideMenu(),
-
+      drawer: const SideMenu(),
       body: AuthBackground(
         child: SingleChildScrollView(
           child: Column(

@@ -11,24 +11,35 @@ class SideMenu extends StatelessWidget {
         children: [
           const _DrawerHeader(),
           ListTile(
-            leading: const Icon(Icons.pages_outlined),
+            leading: const Icon(Icons.home_max_sharp),
             title: const Text('Inicio'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, 'home');
+              Navigator.pushReplacementNamed(context, HomeScreen.routerName);
             },
           ),
           ListTile(
             leading: const Icon(Icons.login_outlined),
             title: const Text('Login'),
             onTap: () {
-              //Navigator.pop(context);
-              Navigator.pushReplacementNamed(context, 'login');
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, LoginScreen.routerName);
             },
           ),
           ListTile(
-            leading: const Icon(Icons.pages_outlined),
+            leading: const Icon(Icons.person_add_alt_rounded),
+            title: const Text('Profile'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, ProfileScreen.routerName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings_accessibility_rounded),
             title: const Text('Settings'),
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, SettingsScreen.routerName);
+            },
           ),
         ],
       ),
