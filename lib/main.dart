@@ -1,6 +1,6 @@
-import 'package:apfsvalencia/providers/articles_provider.dart';
-import 'package:apfsvalencia/providers/theme_provider.dart';
+
 import 'package:apfsvalencia/screens/screens.dart';
+import 'package:apfsvalencia/services/services.dart';
 import 'package:apfsvalencia/share_preferences/preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +27,7 @@ class AppState extends StatelessWidget {
         ChangeNotifierProvider(
             create: (_) =>
                 ThemeProvider(isModoOscuro: Preferences.isModoOscuro)),
+        ChangeNotifierProvider(create: (_) => AuthService()),
       ],
       child: MyApp(),
     );
@@ -39,17 +40,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'APFS VALENCIA',
-      initialRoute: HomeScreen.routerName,
+      initialRoute: CheckAuthScreen.routerName,
       routes: {
-        LoginScreen.routerName: (_) => LoginScreen(),
-        HomeScreen.routerName: (_) => HomeScreen(),
-        DetailBlogScreen.routerName: (_) => DetailBlogScreen(),
-        ProfileScreen.routerName: (_) => ProfileScreen(),
-        SettingsScreen.routerName: (_) => SettingsScreen(),
-        RegisterScreen.routerName: (_) => RegisterScreen(),
+        CheckAuthScreen.routerName  : (_) =>CheckAuthScreen(),
+        DetailBlogScreen.routerName : (_) => DetailBlogScreen(),
+        HomeScreen.routerName       : (_) => HomeScreen(),
+        LoginScreen.routerName      : (_) => LoginScreen(),
+        ProfileScreen.routerName    : (_) => ProfileScreen(),
+        RegisterScreen.routerName   : (_) => RegisterScreen(),
+        SettingsScreen.routerName   : (_) => SettingsScreen(),
 
 
       },
+      scaffoldMessengerKey: NotificationsService.messengerKey,
       //cambiar colores
       theme: Provider.of<ThemeProvider>(context).currentTheme,
     );

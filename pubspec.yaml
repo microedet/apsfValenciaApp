@@ -30,11 +30,19 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  # provider para conexiones asincronas
   provider: ^6.0.2
+  #para conexiones por http
   http: ^0.13.4
+  #para la tarjeta del blog
   card_swiper : ^2.0.1
   getwidget: ^2.0.5
+  #para guardar las preferencias del usuario en local
   shared_preferences: ^2.0.15
+  # para guardar el token del password codificado
+  flutter_secure_storage: ^5.0.2
+
+
 
 
 
