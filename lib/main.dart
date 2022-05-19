@@ -1,6 +1,7 @@
 import 'package:apfsvalencia/screens/screens.dart';
 import 'package:apfsvalencia/services/services.dart';
 import 'package:apfsvalencia/share_preferences/preferences.dart';
+import 'package:apfsvalencia/widgets/widgest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'APFS VALENCIA',
+      
       initialRoute: CheckAuthScreen.routerName,
       routes: {
         CheckAuthScreen.routerName: (_) => CheckAuthScreen(),
@@ -51,6 +53,7 @@ class MyApp extends StatelessWidget {
         ProfileScreen.routerName: (_) => ProfileScreen(),
         RegisterScreen.routerName: (_) => RegisterScreen(),
         SettingsScreen.routerName: (_) => SettingsScreen(),
+        PersonalProfileScreen.routerName: (_)=> PersonalProfileScreen(),
       },
       scaffoldMessengerKey: NotificationsService.messengerKey,
       //cambiar colores

@@ -30,13 +30,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       drawer: const SideMenu(),
-      //quito diseño inicial
-      //body: SingleChildScrollView(
-      //  child: Column(
-      //    children: [const CardBlog()],
-      //  ),
-      //)
-      body: Stack(
+        body: Stack(
         children: [
           const HomeBackground(),
           _HomeBody(),
