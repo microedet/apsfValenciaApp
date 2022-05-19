@@ -11,7 +11,6 @@ class AuthBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.red,
       width: double.infinity,
       height: double.infinity,
       //stack widget dentro de otros

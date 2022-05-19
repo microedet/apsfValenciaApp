@@ -1,8 +1,8 @@
-
 import 'package:apfsvalencia/screens/screens.dart';
 import 'package:apfsvalencia/services/services.dart';
 import 'package:apfsvalencia/share_preferences/preferences.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:apfsvalencia/providers/providers.dart';
 
@@ -37,20 +37,20 @@ class AppState extends StatelessWidget {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //para cambiar el color del estado del sistema arriba hora pila etc
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'APFS VALENCIA',
       initialRoute: CheckAuthScreen.routerName,
       routes: {
-        CheckAuthScreen.routerName  : (_) =>CheckAuthScreen(),
-        DetailBlogScreen.routerName : (_) => DetailBlogScreen(),
-        HomeScreen.routerName       : (_) => HomeScreen(),
-        LoginScreen.routerName      : (_) => LoginScreen(),
-        ProfileScreen.routerName    : (_) => ProfileScreen(),
-        RegisterScreen.routerName   : (_) => RegisterScreen(),
-        SettingsScreen.routerName   : (_) => SettingsScreen(),
-
-
+        CheckAuthScreen.routerName: (_) => CheckAuthScreen(),
+        DetailBlogScreen.routerName: (_) => DetailBlogScreen(),
+        HomeScreen.routerName: (_) => HomeScreen(),
+        LoginScreen.routerName: (_) => LoginScreen(),
+        ProfileScreen.routerName: (_) => ProfileScreen(),
+        RegisterScreen.routerName: (_) => RegisterScreen(),
+        SettingsScreen.routerName: (_) => SettingsScreen(),
       },
       scaffoldMessengerKey: NotificationsService.messengerKey,
       //cambiar colores

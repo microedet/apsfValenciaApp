@@ -15,25 +15,55 @@ class HomeScreen extends StatelessWidget {
     final authservice = Provider.of<AuthService>(context, listen: false);
 
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(34, 80, 53, 1),
-          centerTitle: true,
-          title: const Text('APFS VALENCIA'),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.login_outlined),
-              onPressed: () {
-                authservice.logout();
-                Navigator.pushReplacementNamed(context, LoginScreen.routerName);
-              },
-            ),
+      appBar: AppBar(
+        backgroundColor: const Color.fromRGBO(34, 80, 53, 1),
+        centerTitle: true,
+        title: const Text('APFS VALENCIA'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.login_outlined),
+            onPressed: () {
+              authservice.logout();
+              Navigator.pushReplacementNamed(context, LoginScreen.routerName);
+            },
+          ),
+        ],
+      ),
+      drawer: const SideMenu(),
+      //quito diseño inicial
+      //body: SingleChildScrollView(
+      //  child: Column(
+      //    children: [const CardBlog()],
+      //  ),
+      //)
+      body: Stack(
+        children: [
+          const HomeBackground(),
+          _HomeBody(),
+          ],
+      ),
+    );
+  }
+}
+
+class _HomeBody extends StatelessWidget {
+ 
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+        child: Column(
+          children:[
+
+            //titulos
+             PageTitleHome(),
+            //table menus
+            MenuTable(),
+            
+
           ],
         ),
-        drawer: const SideMenu(),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [const CardBlog()],
-          ),
-        ));
+
+    );
   }
 }
