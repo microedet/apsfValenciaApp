@@ -1,6 +1,5 @@
 import 'package:apfsvalencia/screens/login_screen.dart';
 import 'package:apfsvalencia/services/auth_service.dart';
-import 'package:apfsvalencia/widgets/banner_head.dart';
 import 'package:apfsvalencia/widgets/widgest.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

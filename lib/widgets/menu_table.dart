@@ -1,6 +1,9 @@
+import 'package:apfsvalencia/screens/blog_screen.dart';
 import 'package:apfsvalencia/screens/screens.dart';
 import 'package:apfsvalencia/widgets/widgest.dart';
 import 'package:flutter/material.dart';
+
+/* menu de inicio para seleccionar diferentes opciones*/
 
 class MenuTable extends StatelessWidget {
   const MenuTable({Key? key}) : super(key: key);
@@ -26,12 +29,12 @@ class MenuTable extends StatelessWidget {
               color: Colors.white,
               icon: Icons.question_answer_outlined,
               text: 'Consultas',
-              route: HomeScreen.routerName),
+              route: DetailBlogScreen.routerName),
           _SingleCard(
               color: Colors.white,
               icon: Icons.new_releases_outlined,
               text: 'Blog',
-              route: HomeScreen.routerName),
+              route: BlogScreen.routerName),
         ]),
         TableRow(children: [
           _SingleCard(

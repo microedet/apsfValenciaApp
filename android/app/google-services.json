@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "752410586008",
+    "firebase_url": "https://apfsvalencia-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "apfsvalencia",
+    "storage_bucket": "apfsvalencia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752410586008:android:b1eae150883a01c5ecd9ed",
+        "android_client_info": {
+          "package_name": "com.example.apfsvalencia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752410586008-kihlegd0pe0t775d385crk7noq5d579n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCirGQDgW4zFv6aOQokFpu2MqbczO3fAZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752410586008-kihlegd0pe0t775d385crk7noq5d579n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

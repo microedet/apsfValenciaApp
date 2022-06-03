@@ -1,3 +1,6 @@
+/* tarjeta para mostrar blog*/
+
+
 import 'package:apfsvalencia/screens/detail_blog_screen.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';

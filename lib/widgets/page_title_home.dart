@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+
+/* titulo de cabecera del menu principal encima de la table*/
+
 class PageTitleHome extends StatelessWidget {
   const PageTitleHome({Key? key}) : super(key: key);
 

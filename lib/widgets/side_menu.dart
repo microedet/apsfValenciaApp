@@ -1,6 +1,8 @@
 import 'package:apfsvalencia/screens/screens.dart';
 import 'package:flutter/material.dart';
 
+/* menu lateral desplegable  */
+
 class SideMenu extends StatelessWidget {
   const SideMenu({Key? key}) : super(key: key);
 
@@ -39,6 +41,14 @@ class SideMenu extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
               Navigator.pushReplacementNamed(context, SettingsScreen.routerName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings_accessibility_rounded),
+            title: const Text('Email'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, VerifyEmailScreen.routerName);
             },
           ),
         ],

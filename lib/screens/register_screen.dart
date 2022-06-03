@@ -147,17 +147,24 @@ class _IniciarSesionForm extends StatelessWidget {
 
                             //TODO: validar si el login es correcto
                             final String? errorMessage =
-                                await authService.createUser(loginForm.email, loginForm.password);
+                                await authService.createUser(
+                                    loginForm.email, loginForm.password);
 
                             if (errorMessage == null) {
+                              /*Navigator.restorablePushReplacementNamed(
+                                  context, HomeScreen.routerName);*/
+                              //TODO: redireccionar a pagina verificacion correo
                               Navigator.restorablePushReplacementNamed(
-                                  context, HomeScreen.routerName);
+                                  context, VerifyEmailScreen.routerName);
                             } else {
-                              print(errorMessage);
-                              
+                              //print(errorMessage);
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                      content: Text(errorMessage.toString())));
+
+                              loginForm.isLoading = false;
                             }
-                             loginForm.isLoading = false;
- 
+                            //loginForm.isLoading = false;
                           })
               ],
             )));
