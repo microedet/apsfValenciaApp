@@ -13,9 +13,9 @@ class ApiBlogProvider extends ChangeNotifier {
 
   Future<List<ApiBlog>> getAllApiBlog() async {
     //si ya tiene datos devuelve los datos no los actualiza
-    //if (apiprueba != null) {
-    //  return apiprueba;
-    //}
+    /* if (apiblog != null) {
+      return apiblog;
+    } */
 
     //si no hay datos llamados al servicio
     var service = new ApiBlogServices();

@@ -7,24 +7,25 @@ import 'package:provider/provider.dart';
 
 import '../interfaces/input_decorations.dart';
 import '../providers/providers.dart';
-import '../services/auth_service.dart';
 import 'screens.dart';
 
 class PersonalProfileScreen extends StatelessWidget {
   static String routerName = 'PersonalProfile';
+
+  const PersonalProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_outlined),
+          icon: const Icon(Icons.arrow_back_outlined),
           onPressed: () {
             Navigator.popAndPushNamed(context, HomeScreen.routerName);
           },
         ),
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(34, 80, 53, 1),
+        backgroundColor: const Color.fromRGBO(34, 80, 53, 1),
         title: const Text('Datos Personales'),
       ),
       body: PersonalProfile(
@@ -50,7 +51,7 @@ class PersonalProfileScreen extends StatelessWidget {
                   ChangeNotifierProvider(
                     create: (_) => LoginFormProvider(),
                     //contenido datos a rellenar
-                    child: _DatosForm(),
+                    child: const _DatosForm(),
                   )
                 ],
               )),
@@ -78,7 +79,6 @@ class _DatosForm extends StatelessWidget {
 
     return Container(
         child: Form(
-            //TODO:mantener la referencia al Key
             key: loginForm.formKey,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             child: Column(
@@ -137,7 +137,7 @@ class _DatosForm extends StatelessWidget {
                     return 'El DNI tiene que tener más de 8 caracteres';
                   },
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 TextFormField(
                   autocorrect: false,
                   keyboardType: TextInputType.name,
@@ -191,7 +191,7 @@ class _DatosForm extends StatelessWidget {
                     return 'La Provincia tiene que tener más de dos caracteres';
                   },
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 TextFormField(
                   autocorrect: false,
                   keyboardType: TextInputType.phone,
@@ -205,7 +205,7 @@ class _DatosForm extends StatelessWidget {
                     return 'El telefono tiene que tener más de 8 caracteres';
                   },
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 MaterialButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
@@ -214,9 +214,9 @@ class _DatosForm extends StatelessWidget {
                     color: Colors.green,
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+                          const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
                       child: Text(loginForm.isLoading ? 'Espere' : 'Iniciar',
-                          style: TextStyle(color: Colors.white)),
+                          style: const TextStyle(color: Colors.white)),
                     ),
                     onPressed: loginForm.isLoading
                         ? null
@@ -234,7 +234,6 @@ class _DatosForm extends StatelessWidget {
 
                             //await Future.delayed(Duration(seconds: 2));
 
-                            //TODO: validar si el login es correcto
                             final String? errorMessage = await authService
                                 .login(loginForm.email, loginForm.password);
 

@@ -12,7 +12,7 @@ class ApiBlogServices {
     if (response.statusCode == 200) {
       final decoded = await json.decode(response.body);
 
-      print(decoded);
+      //print(decoded);
 
       for (var apiblog in decoded) {
         var api = new ApiBlog.fromJson(apiblog);

@@ -1,3 +1,5 @@
+export 'package:apfsvalencia/screens/personal_profile_screen.dart';
+export 'package:apfsvalencia/screens/blog_screen.dart';
 export 'package:apfsvalencia/screens/verify_email_screen.dart';
 export 'package:apfsvalencia/screens/check_auth_screen.dart';
 export 'package:apfsvalencia/screens/detail_blog_screen.dart';

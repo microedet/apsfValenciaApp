@@ -36,7 +36,7 @@ dependencies:
   http: ^0.13.4
   #para la tarjeta del blog
   card_swiper : ^2.0.1
-  getwidget: ^2.0.5
+  #getwidget: ^2.0.5
   #para guardar las preferencias del usuario en local
   shared_preferences: ^2.0.15
   # para guardar el token del password codificado
@@ -44,6 +44,8 @@ dependencies:
   # para acceder a firebase
   firebase_auth: ^3.3.18
   firebase_core: ^1.17.0
+  # leer etiquetas html
+  flutter_html: ^2.2.1
 
 
 

@@ -66,7 +66,7 @@ class _DrawerHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return DrawerHeader(
       child: Container(),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/menu-img.jpg'), fit: BoxFit.cover),
       ),

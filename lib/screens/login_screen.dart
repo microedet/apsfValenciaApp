@@ -1,11 +1,9 @@
 import 'package:apfsvalencia/interfaces/input_decorations.dart';
 import 'package:apfsvalencia/providers/login_form_provider.dart';
 import 'package:apfsvalencia/screens/screens.dart';
-import 'package:apfsvalencia/services/auth_service.dart';
 import 'package:apfsvalencia/widgets/widgest.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider/single_child_widget.dart';
 
 import '../services/services.dart';
 
@@ -19,7 +17,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(34, 80, 53, 1),
+        backgroundColor: const Color.fromRGBO(34, 80, 53, 1),
         title: const Text('APFS VALENCIA'),
       ),
       drawer: const SideMenu(),
@@ -45,7 +43,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   ChangeNotifierProvider(
                     create: (_) => LoginFormProvider(),
-                    child: _IniciarSesionForm(),
+                    child: const _IniciarSesionForm(),
                   )
                 ],
               )),

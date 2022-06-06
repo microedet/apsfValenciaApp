@@ -1,8 +1,6 @@
-import 'package:apfsvalencia/screens/blog_screen.dart';
 import 'package:apfsvalencia/screens/screens.dart';
 import 'package:apfsvalencia/services/services.dart';
 import 'package:apfsvalencia/share_preferences/preferences.dart';
-import 'package:apfsvalencia/widgets/widgest.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,8 +13,8 @@ void main() async {
   //para inicializar valores globales
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-      );
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await Preferences.init();
   runApp(AppState());
 }
@@ -28,14 +26,14 @@ class AppState extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-         ChangeNotifierProvider(
+        ChangeNotifierProvider(
           create: (_) => ApiPruebaProvider(),
           lazy: false,
         ),
         ChangeNotifierProvider(
           create: (_) => ApiBlogProvider(),
           lazy: false,
-        ), 
+        ),
         ChangeNotifierProvider(
             create: (_) =>
                 ThemeProvider(isModoOscuro: Preferences.isModoOscuro)),
@@ -47,8 +45,12 @@ class AppState extends StatelessWidget {
 }
 
 class MyApp extends StatelessWidget {
+  late String pepe;
   @override
   Widget build(BuildContext context) {
+    String titulo = "";
+    String imagen = "";
+    String content = "";
     //para cambiar el color del estado del sistema arriba hora pila etc
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     return MaterialApp(
@@ -58,7 +60,7 @@ class MyApp extends StatelessWidget {
       initialRoute: CheckAuthScreen.routerName,
       routes: {
         CheckAuthScreen.routerName: (_) => CheckAuthScreen(),
-        DetailBlogScreen.routerName: (_) => DetailBlogScreen(),
+        DetailBlogScreen.routerName: (context) => DetailBlogScreen(titulo,imagen,content),
         HomeScreen.routerName: (_) => HomeScreen(),
         LoginScreen.routerName: (_) => LoginScreen(),
         ProfileScreen.routerName: (_) => ProfileScreen(),

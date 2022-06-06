@@ -1,33 +1,8 @@
-/* diseño del fondo de todos las pantallas */
-
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
-class BackgroundAllScreen extends StatelessWidget {
-  final Widget child;
-  const BackgroundAllScreen({Key? key, required this.child}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      //height: double.infinity,
-      //stack widget dentro de otros
-      child: Stack(
-        children: [
-          _GreenBox(),
-          this.child,
-        ],
-      ),
-    );
-  }
-}
-
-
-
-class _GreenBox extends StatelessWidget {
-  const _GreenBox({Key? key}) : super(key: key);
+class GreenBox extends StatelessWidget {
+  const GreenBox({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
