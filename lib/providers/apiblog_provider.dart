@@ -3,11 +3,8 @@ import 'package:apfsvalencia/services/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
-
 class ApiBlogProvider extends ChangeNotifier {
   late List<ApiBlog> apiblog;
-
-   
 
   //ApiPruebaProvider(this.apiprueba)
 
@@ -20,7 +17,7 @@ class ApiBlogProvider extends ChangeNotifier {
     //si no hay datos llamados al servicio
     var service = new ApiBlogServices();
     this.apiblog = await service.getAll();
-
+    print(apiblog);
     //se notifican los cambios
     notifyListeners();
     return apiblog;
@@ -34,7 +31,5 @@ class ApiBlogProvider extends ChangeNotifier {
     //se notifican los cambios
     notifyListeners();
     return apiblog;
-
-
   }
 }

@@ -11,6 +11,7 @@ class MenuTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Table(
+
       children: [
         TableRow(children: [
           _SingleCard(
@@ -18,36 +19,41 @@ class MenuTable extends StatelessWidget {
               icon: Icons.person_off_outlined,
               text: 'Perfil Personal',
               route:PersonalProfileScreen.routerName),
-          _SingleCard(
-              color: Colors.white,
-              icon: Icons.family_restroom_outlined,
-              text: 'Familia',
-              route: RegisterScreen.routerName),
-        ]),
-        TableRow(children: [
-          _SingleCard(
+
+              _SingleCard(
               color: Colors.white,
               icon: Icons.question_answer_outlined,
               text: 'Consultas',
               route: DetailBlogScreen.routerName),
+                   
+        ]),
+        TableRow(children: [
+          
           _SingleCard(
               color: Colors.white,
               icon: Icons.new_releases_outlined,
               text: 'Blog',
               route: BlogScreen.routerName),
-        ]),
-        TableRow(children: [
-          _SingleCard(
+
+               _SingleCard(
               color: Colors.white,
               icon: Icons.question_answer_sharp,
-              text: 'Preguntas Frecuentes',
+              text: 'Preguntas',
               route: HomeScreen.routerName),
+        ]),
+        /* TableRow(children: [
+           _SingleCard(
+              color: Colors.white,
+              icon: Icons.family_restroom_outlined,
+              text: 'Familia',
+              route: RegisterScreen.routerName),
+          
           _SingleCard(
               color: Colors.white,
               icon: Icons.subscriptions_outlined,
               text: 'Suscripción',
               route: HomeScreen.routerName),
-        ])
+        ]) */
       ],
     );
   }

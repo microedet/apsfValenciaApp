@@ -51,6 +51,8 @@ class _HomeBody extends StatelessWidget {
             //titulos
              PageTitleHome(),
             //table menus
+           SizedBox(height: 60),
+
             MenuTable(),
             
 

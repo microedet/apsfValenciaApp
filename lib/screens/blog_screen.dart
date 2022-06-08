@@ -1,5 +1,4 @@
 ///pantalla para mostrar los articulos del blog **/
-
 import 'package:apfsvalencia/providers/providers.dart';
 import 'package:apfsvalencia/screens/screens.dart';
 import 'package:flutter/material.dart';
