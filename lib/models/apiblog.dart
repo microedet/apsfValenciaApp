@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
+
 ApiBlog apiBlogFromJson(String str) => ApiBlog.fromJson(json.decode(str));
 
 String apiBlogToJson(ApiBlog data) => json.encode(data.toJson());
@@ -13,8 +15,8 @@ class ApiBlog {
         required this.title,
         required this.content,
         required this.published,
-        required this.image,
-        required this.author,
+         required this.image,
+         this.author,
         required this.status,
     });
 
@@ -22,7 +24,7 @@ class ApiBlog {
     String content;
     DateTime published;
     String image;
-    int author;
+    int ?author;
     String status;
 
     factory ApiBlog.fromJson(Map<String, dynamic> json) => ApiBlog(

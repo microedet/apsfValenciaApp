@@ -1,4 +1,5 @@
 
+export 'package:apfsvalencia/providers/apipregunta_provider.dart';
 export 'package:apfsvalencia/models/articles_blog_response.dart';
 export 'package:apfsvalencia/models/models.dart';
 export 'package:apfsvalencia/providers/apiblog_provider.dart';

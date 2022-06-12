@@ -1,3 +1,4 @@
+export 'package:apfsvalencia/screens/pregunta_screen%20copy.dart';
 export 'package:apfsvalencia/screens/personal_profile_screen.dart';
 export 'package:apfsvalencia/screens/blog_screen.dart';
 export 'package:apfsvalencia/screens/verify_email_screen.dart';

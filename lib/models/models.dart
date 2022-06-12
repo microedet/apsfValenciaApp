@@ -1,5 +1,6 @@
 
 
+export 'package:apfsvalencia/models/apipregunta.dart';
 export 'package:apfsvalencia/models/detallesblog.dart';
 export 'package:apfsvalencia/models/apiblog.dart';
 export 'package:apfsvalencia/models/apiprueba.dart';

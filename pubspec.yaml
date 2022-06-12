@@ -34,8 +34,10 @@ dependencies:
   provider: ^6.0.2
   #para conexiones por http
   http: ^0.13.4
-  #para la tarjeta del blog
-  card_swiper : ^2.0.1
+  #tarjeta para card blog
+  card_swiper: ^2.0.4
+  #para la tarjeta de preguntas frecuentes
+  slimy_card: ^1.0.4
   #getwidget: ^2.0.5
   #para guardar las preferencias del usuario en local
   shared_preferences: ^2.0.15

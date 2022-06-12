@@ -27,7 +27,7 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => ApiPruebaProvider(),
+          create: (_) => ApiPreguntaProvider(),
           lazy: false,
         ),
         ChangeNotifierProvider(
@@ -69,6 +69,7 @@ class MyApp extends StatelessWidget {
         PersonalProfileScreen.routerName: (_) => PersonalProfileScreen(),
         VerifyEmailScreen.routerName: (_) => VerifyEmailScreen(),
         BlogScreen.routerName: (_) => BlogScreen(),
+        PreguntaScreen.routerName: (_)=>PreguntaScreen()
       },
       scaffoldMessengerKey: NotificationsService.messengerKey,
       //cambiar colores

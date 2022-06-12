@@ -4,36 +4,36 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 
-class ApiBlogProvider extends ChangeNotifier {
-  late List<ApiBlog> apiblog;
+class ApiPreguntaProvider extends ChangeNotifier {
+  late List<ApiPregunta> apiPregunta;
 
    
 
   //ApiPruebaProvider(this.apiprueba)
 
-  Future<List<ApiBlog>> getAllApiBlog() async {
+  Future<List<ApiPregunta>> getAllApiPregunta() async {
     //si ya tiene datos devuelve los datos no los actualiza
     /* if (apiblog != null) {
       return apiblog;
     } */
 
     //si no hay datos llamados al servicio
-    var service = new ApiBlogServices();
-    this.apiblog = await service.getAll();
+    var service = new ApiPreguntaServices();
+    this.apiPregunta = await service.getAll();
 
     //se notifican los cambios
     notifyListeners();
-    return apiblog;
+    return apiPregunta;
   }
 
-  Future<List<ApiBlog>> refreshApiPrueba() async {
+  Future<List<ApiPregunta>> refreshApiPrueba() async {
     //si no hay datos llamados al servicio
-    var service = new ApiBlogServices();
-    this.apiblog = await service.getAll();
+    var service = new ApiPreguntaServices();
+    this.apiPregunta = await service.getAll();
 
     //se notifican los cambios
     notifyListeners();
-    return apiblog;
+    return apiPregunta;
 
 
   }
