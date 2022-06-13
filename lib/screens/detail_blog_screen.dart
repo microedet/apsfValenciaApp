@@ -78,6 +78,7 @@ class _CustomAppBar extends StatelessWidget {
             //child: Html(data: titulo),
             child: Text(
               titulo,
+              textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 16),
             ), 
           ),

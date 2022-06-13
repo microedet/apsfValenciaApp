@@ -10,7 +10,7 @@ class ApiBlogServices {
     final response = await http.get(url);
     var lst = <ApiBlog>[];
     if (response.statusCode == 200) {
-      final decoded = await json.decode(response.body);
+      final decoded = await json.decode(utf8.decode(response.bodyBytes));
 
       print(decoded);
 

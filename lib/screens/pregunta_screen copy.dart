@@ -52,7 +52,7 @@ class _PreguntaScreenState extends State<PreguntaScreen> {
                   return ListView.builder(
                     itemCount: apiPregunta!.length,
                     itemBuilder: (_, int i) {
-                       return _cardBlog(context, apiPregunta[i]);
+                      return _cardBlog(context, apiPregunta[i]);
                     },
                   );
                 } else {
@@ -70,128 +70,67 @@ class _PreguntaScreenState extends State<PreguntaScreen> {
 
   Widget _cardBlog(context, ApiPregunta apiPregunta) => Column(
         children: [
-           SizedBox(height: 151),
- 
-           SlimyCard(
+          SizedBox(height: 30),
+          SlimyCard(
             width: MediaQuery.of(context).size.width / 1.2,
-            topCardHeight: 100,
+            topCardHeight: 150,
+            bottomCardHeight: 300,
             color: Color.fromRGBO(34, 80, 53, 1),
-            topCardWidget:  SlimyCardTopWidget(apiPregunta),
-            bottomCardWidget: const SlimyCardBottomWidget(),
+            topCardWidget: SlimyCardTopWidget(apiPregunta),
+            bottomCardWidget:  SlimyCardBottomWidget(apiPregunta),
           ),
         ],
       );
 }
 
 class SlimyCardTopWidget extends StatelessWidget {
-   SlimyCardTopWidget(ApiPregunta apiPregunta, {Key? key}) : super(key: key);
-   
+  ApiPregunta apiPregunta;
+  SlimyCardTopWidget(this.apiPregunta, {Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context ) {
-    
+  Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        /* Image.network(
-          'https://upload.wikimedia.org/wikipedia/en/d/d4/Mickey_Mouse.png',
-          height: 150,
-          width: 150,
-        ), */
-        Text( "texto",
-                     style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       color: Colors.white,
-                       fontSize: 24,
-                     ),
+        Text(
+          apiPregunta.tituloPregunta,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 16,
+          ),
         )
-        
       ],
     );
   }
 }
 
 class SlimyCardBottomWidget extends StatelessWidget {
-  const SlimyCardBottomWidget({Key? key}) : super(key: key);
+  
+  ApiPregunta apiPregunta;
+  
+  SlimyCardBottomWidget(this.apiPregunta, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
-        Text("It is none other than"),
-        Text(
-          "Micky Mouse",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+    return Container(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+              Text(
+                apiPregunta.respuestaPregunta,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }
-
-
-       
-        /* padding: const EdgeInsets.all(10.0),
-        child: Card(
-          clipBehavior: Clip.antiAlias,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24),
-          ),
-          child: Column(
-            children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [ */
-                 /*  Ink.image(
-                      // ignore: prefer_const_constructors
-                      image: NetworkImage(
-                          'https://apsvalencia.pythonanywhere.com' +
-                             apiBlog.image),
-                      colorFilter: ColorFilters.greyscale,
-                      child: InkWell(
-                        onTap: () {},
-                      ),
-                      height: 240,
-                      fit: BoxFit.cover), */
-                  /* Text(
-                     apiBlog.title,
-                     style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       color: Colors.white,
-                       fontSize: 24,
-                     ), 
-                    ), */
-               /*  ],
-              ),
-              SizedBox(height: 8),
-              Padding(
-                padding: EdgeInsets.all(16).copyWith(bottom: 0),
-                child: Text(
-                  apiPregunta.tituloPregunta,
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
-              SizedBox(height: 8),
-              ButtonBar(
-                alignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                      onPressed: () {
-                       // print(apiBlog.title);
-                        /* Navigator.of(context).push(MaterialPageRoute<Null>(
-                          builder:(BuildContext context) {
-                              return new DetailBlogScreen(apiBlog.title,apiBlog.image,apiBlog.content);
-                          }) );*/
-                        /* Navigator.popAndPushNamed(
-                            context, DetailBlogScreen.routerName, arguments:
-                          DetailBlogScreen(apiBlog.title )
-                        ); */
-                      },
-                      child: Text('Leer Mas'))
-                ],
-              )
-            ],
-          ),
-        ), */
-      
 

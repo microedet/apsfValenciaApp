@@ -10,9 +10,8 @@ class ApiPreguntaServices {
     final response = await http.get(url);
     var lst = <ApiPregunta>[];
     if (response.statusCode == 200) {
-      final decoded = await json.decode(response.body);
-
-      print(decoded);
+      final decoded = await json.decode(utf8.decode(response.bodyBytes));
+      
 
       for (var apipregunta in decoded) {
         var api = new ApiPregunta.fromJson(apipregunta);

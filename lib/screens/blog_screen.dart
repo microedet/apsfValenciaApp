@@ -69,7 +69,6 @@ class _BlogScreenState extends State<BlogScreen> {
   }
 
   Widget _cardBlog(context, ApiBlog apiBlog) => Padding(
-        
         padding: const EdgeInsets.all(10.0),
         child: Card(
           clipBehavior: Clip.antiAlias,
@@ -85,7 +84,7 @@ class _BlogScreenState extends State<BlogScreen> {
                       // ignore: prefer_const_constructors
                       image: NetworkImage(
                           'https://apsvalencia.pythonanywhere.com' +
-                             apiBlog.image),
+                              apiBlog.image),
                       colorFilter: ColorFilters.greyscale,
                       child: InkWell(
                         onTap: () {},
@@ -107,7 +106,11 @@ class _BlogScreenState extends State<BlogScreen> {
                 padding: EdgeInsets.all(16).copyWith(bottom: 0),
                 child: Text(
                   apiBlog.title,
-                  style: TextStyle(fontSize: 16),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(height: 8),
@@ -118,9 +121,10 @@ class _BlogScreenState extends State<BlogScreen> {
                       onPressed: () {
                         print(apiBlog.title);
                         Navigator.of(context).push(MaterialPageRoute<Null>(
-                          builder:(BuildContext context) {
-                              return new DetailBlogScreen(apiBlog.title,apiBlog.image,apiBlog.content);
-                          }));
+                            builder: (BuildContext context) {
+                          return new DetailBlogScreen(
+                              apiBlog.title, apiBlog.image, apiBlog.content);
+                        }));
                         /* Navigator.popAndPushNamed(
                             context, DetailBlogScreen.routerName, arguments:
                           DetailBlogScreen(apiBlog.title )

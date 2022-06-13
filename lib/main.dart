@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:apfsvalencia/screens/screens.dart';
 import 'package:apfsvalencia/services/services.dart';
 import 'package:apfsvalencia/share_preferences/preferences.dart';
@@ -20,7 +21,7 @@ void main() async {
 }
 
 class AppState extends StatelessWidget {
-  const AppState({Key? key}) : super(key: key);
+  //const AppState({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class AppState extends StatelessWidget {
 }
 
 class MyApp extends StatelessWidget {
-  late String pepe;
+   String pepe;
   @override
   Widget build(BuildContext context) {
     String titulo = "";
