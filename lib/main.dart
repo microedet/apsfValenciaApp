@@ -70,7 +70,8 @@ class MyApp extends StatelessWidget {
         PersonalProfileScreen.routerName: (_) => PersonalProfileScreen(),
         VerifyEmailScreen.routerName: (_) => VerifyEmailScreen(),
         BlogScreen.routerName: (_) => BlogScreen(),
-        PreguntaScreen.routerName: (_)=>PreguntaScreen()
+        PreguntaScreen.routerName: (_)=>PreguntaScreen(),
+        Holamundo.routerName: (_)=>Holamundo()
       },
       scaffoldMessengerKey: NotificationsService.messengerKey,
       //cambiar colores

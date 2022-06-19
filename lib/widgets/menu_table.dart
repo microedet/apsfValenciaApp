@@ -17,23 +17,19 @@ class MenuTable extends StatelessWidget {
               color: Colors.white,
               icon: Icons.person_off_outlined,
               text: 'Perfil Personal',
-              route:PersonalProfileScreen.routerName),
-
+              route: PersonalProfileScreen.routerName),
           _SingleCard(
               color: Colors.white,
               icon: Icons.question_answer_sharp,
               text: 'Preguntas',
               route: PreguntaScreen.routerName),
-
-
-         
         ]),
         TableRow(children: [
           _SingleCard(
               color: Colors.white,
               icon: Icons.question_answer_outlined,
               text: 'Consultas',
-              route: DetailBlogScreen.routerName),
+              route: HomeScreen.routerName),
           _SingleCard(
               color: Colors.white,
               icon: Icons.new_releases_outlined,
@@ -67,7 +63,11 @@ class _SingleCard extends StatelessWidget {
   final String route;
 
   const _SingleCard(
-      {Key? key, required this.icon, required this.color, required this.text, required this.route})
+      {Key? key,
+      required this.icon,
+      required this.color,
+      required this.text,
+      required this.route})
       : super(key: key);
 
   @override
